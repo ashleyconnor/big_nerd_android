@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CriminalIntent.iml" filepath="$PROJECT_DIR$/CriminalIntent.iml" />
+      <module fileurl="file://$USER_HOME$/Projects/android/big_nerd_android/chapter15/CriminalIntent/app/app.iml" filepath="$USER_HOME$/Projects/android/big_nerd_android/chapter15/CriminalIntent/app/app.iml" />
+    </modules>
+  </component>
+</project>

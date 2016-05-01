@@ -35,7 +35,7 @@ public class CrimeFragment extends Fragment {
   private Button mTimeButton;
   private CheckBox mSolvedCheckBox;
   private SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMM d, yyyy");
-  private SimpleDateFormat timeFormat = new SimpleDateFormat("h:m a");
+  private SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
 
   public static CrimeFragment newInstance(UUID crimeId) {
     Bundle args = new Bundle();
@@ -51,6 +51,13 @@ public class CrimeFragment extends Fragment {
 
     UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
     mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
+  }
+
+  @Override public void onPause() {
+    super.onPause();
+
+    CrimeLab.get(getActivity())
+        .updateCrime(mCrime);
   }
 
   @Nullable @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
